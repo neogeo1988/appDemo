@@ -1,0 +1,205 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=utf-8>
+<meta name="viewport" content="width=620">
+<title>HTML5 Demo: Drag and drop</title>
+<link rel="stylesheet" href="css/html5demos.css">
+<script src="js/h5utils.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+</head>
+<body>
+<section id="wrapper2">
+<div id="carbonads-container"><div class="carbonad"><div id="azcarbon"></div><script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/14060/azcarbon_2_1_0_VERT"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
+    <header>
+      <h1>The Future of Financial Industry Apps and Data... HERE Today.</h1>
+      <h2>Value. Secure. Easy. Fast. Cost-saving. Productive. Sustainable. Good for our Planet & People.</h2>
+       <script>
+$(document).ready(function() {
+     $("button")
+        .button()
+        .click(function(){ 
+            $(function() {
+    $( "#dialog-message" ).dialog({
+      modal: false,
+      buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  });
+        })
+        .text("Install (Free Trial)");
+});
+
+  </script>
+    </header>
+
+<style type="text/css">
+li {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #000;
+  margin: 10px;
+  width: 150px;
+  border: 3px dashed #999;
+  background: #eee;
+  padding: 10px;
+  display: block;
+}
+
+*[draggable=true] {
+  -moz-user-select:none;
+  -khtml-user-drag: element;
+  cursor: move;
+}
+
+*:-khtml-drag {
+  background-color: rgba(238,238,238, 0.5);
+}
+
+li a:hover:after {
+  content: ' (drag me)';
+}
+
+ul {
+  margin-left: 290px;
+  min-height: 300px;
+}
+
+li.over {
+  border-color: #333;
+  background: #ccc;
+}
+
+#bin {
+  background: url(images/img1.png) top right no-repeat;
+  height: 250px;
+  width: 250px;
+  float: left;
+  /*border: 5px solid #000;*/
+  position: relative;
+  margin-top: 0;
+}
+
+#bin.over {
+  background: url(images/img1.png) top left no-repeat;
+}
+
+#bin p {
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  bottom: 97px;
+  width: 258px;
+  font-size: 32px;
+  color: #fff;
+  text-shadow: #000 2px 2px 2px;
+}
+
+   .stars{
+    width: 130px;
+    height: 26px;
+    background: url(http://sandbox.bumbu.ru/ui/external/stars.png) 0 0 repeat-x;
+    position: relative;
+}
+
+.stars .rating{
+    height: 26px;
+    background: url(http://sandbox.bumbu.ru/ui/external/stars.png) 0 -26px repeat-x;
+}
+
+.stars input{
+    display: none;
+}
+
+.stars label{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 26px;
+    width: 130px;
+    cursor: pointer;
+}
+.stars:hover label{
+    display: block;
+}
+.stars label:hover{
+    background: url(http://sandbox.bumbu.ru/ui/external/stars.png) 0 -52px repeat-x;
+}
+
+.stars label + input + label{width: 104px;}
+.stars label + input + label + input + label{width: 78px;}
+.stars label + input + label + input + label + input + label{width: 52px;}
+.stars label + input + label + input + label + input + label + input + label{width: 26px;}
+
+.stars input:checked + label{
+    display: block;
+    background: url(http://sandbox.bumbu.ru/ui/external/stars.png) 0 -52px repeat-x;
+}
+.img-text-left{
+  float:left;
+}
+</style>
+<article>
+<div class="img-text-left">
+  <div style="margin-left:10px;">
+  <a href="page1a.html"><img src="images/img1.png"></a>
+</div>
+    <div style="margin-left: 53px;">
+    <p>Title of App Here</p>
+  </div>
+  <div style="margin-left:40px;">
+    <p><strong>Category:</strong>About App</p>
+  </div>
+ 
+  <div style="margin-left: 51px; display: block; margin-top: -11px;">
+    <div class="stars">
+    <div class="rating" style="width:65%"></div>
+    <input type="radio" name="rating" id="star5" value="5">
+    <label for="star5"></label>
+    <input type="radio" name="rating" id="star4" value="4">
+    <label for="star4"></label>
+    <input type="radio" name="rating" id="star3" value="3">
+    <label for="star3"></label>
+    <input type="radio" name="rating" id="star2" value="2">
+    <label for="star2"></label>
+    <input type="radio" name="rating" id="star1" value="1">
+    <label for="star1"></label>
+  </div>
+</div>
+
+ <div style="margin-left: 27px;display: block;margin-top: 6px;">
+  <button style="padding:7px;">Install (Free Trial)</button>
+</div>
+</div>
+</article>
+
+ <div style="display: none;">
+
+<div id="dialog-message" title="Install complete">
+  <p>
+    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+    Your files have downloaded successfully into the My Downloads folder.
+  </p>
+  <p>
+    Currently using <b>36% of your storage space</b>.
+  </p>
+</div>
+ 
+<p>Sed vel diam id libero < Donec aliquet leo vel magna. Phasellus rhoncus faucibus ante. Etiam bibendum, enim faucibus aliquet rhoncus, arcu felis ultricies neque, sit amet auctor elit eros a lectus.</p>
+ 
+</div> 
+
+</section>
+</body>
+</html>
